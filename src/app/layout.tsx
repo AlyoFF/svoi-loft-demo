@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SVOI - Генератор презентаций",
+  title: "SVOY - Генератор презентаций",
   description: "Персонализированные коммерческие предложения для аренды лофтов",
 };
 

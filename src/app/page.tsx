@@ -9,7 +9,7 @@ export default function HomePage() {
       <header className="bg-brand-dark py-6 px-6">
         <div className="max-w-3xl mx-auto flex items-center justify-between">
           <div>
-            <h1 className="text-brand-gold font-heading text-xl">SVOI</h1>
+            <h1 className="text-brand-gold font-heading text-xl">SVOY</h1>
             <p className="text-white/40 text-xs mt-0.5">Генератор презентаций</p>
           </div>
           <div className="text-right">

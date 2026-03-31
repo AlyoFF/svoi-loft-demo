@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-brand-dark bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-dark {
+    @apply bg-brand-dark text-white;
+  }
+
+  .section-cream {
+    @apply bg-brand-cream text-brand-dark;
+  }
+
+  .gold-accent {
+    @apply text-brand-gold;
+  }
+
+  .gold-line {
+    @apply w-16 h-0.5 bg-brand-gold;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-brand-gold text-white font-medium
+           rounded-lg hover:bg-brand-gold-dark transition-all duration-300
+           text-base tracking-wide;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-brand-gold text-brand-gold
+           font-medium rounded-lg hover:bg-brand-gold hover:text-white transition-all duration-300
+           text-base tracking-wide;
+  }
+}
+
+/* Анимация появления секций */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Стили для печати (экспорт в PDF) */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .section-dark {
+    background-color: #1A1A1A !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A96E;
+  border-radius: 3px;
+}
